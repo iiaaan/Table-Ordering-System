@@ -1,0 +1,10 @@
+.backgroundImage img{
+    height: 20vh;
+    width: 100vw;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

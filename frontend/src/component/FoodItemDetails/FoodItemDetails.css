@@ -1,0 +1,188 @@
+/* FoodItemDetails.css */
+
+.ItemDetails {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.basciInfo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.image {
+  flex: 0 0 40%; /* image takes 40% width */
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.details p:first-child {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.details p:nth-child(2) {
+  color: gray;
+  font-weight: 600;
+}
+
+.customize {
+  margin-bottom: 20px;
+}
+
+.AddOns {
+  margin-bottom: 20px;
+}
+
+.AddOns p {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.addon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #f9f9f9;
+}
+
+.addon p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.addon p:nth-child(1) {
+  flex: 2;
+}
+
+.addon p:nth-child(2),
+.addon p:nth-child(3) {
+  cursor: pointer;
+  flex: 0 0 24px;
+  text-align: center;
+  background: #eee;
+  border-radius: 4px;
+  user-select: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.addon p:nth-child(3) {
+  margin-left: 8px;
+}
+
+.addon p:nth-child(4) {
+  flex: 0 0 24px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.Note p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.Note textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* 3. Add to cart section below Customize */
+
+.placeOrder {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.placeOrder .react-select__control {
+  font-size: 1rem;
+}
+
+.placeOrder button {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.placeOrder button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.placeOrder button:not(:disabled):hover {
+  background-color: #219150;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+
+@media (max-width: 360px) {
+  .basciInfo {
+    flex-direction: column;
+  }
+
+  .image {
+    flex: none;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+

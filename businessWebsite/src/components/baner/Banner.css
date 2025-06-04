@@ -1,0 +1,45 @@
+.banner {
+    overflow: hidden;
+    background-color: #E5E8EB; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.banner-track {
+  display: flex;
+  gap: 50px;
+  margin-right: -50px;
+  animation: marquee 10s linear infinite;
+}
+
+.banner-content {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0);    }
+  to   { transform: translateX(-1000px); }
+}
+
+.banner h1{
+    color: #777888;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+    font-size: 40px;
+    letter-spacing: -0.07em;
+    font-stretch: condensed;  
+}
+
+.banner h2{
+    color: #777788;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.05em;
+    font-stretch: condensed;  
+}
+

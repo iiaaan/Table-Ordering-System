@@ -1,0 +1,13 @@
+.app {
+  padding-top: 10vh;
+}
+
+.toast {
+  font-size: 12px;    
+  padding: 16px 24px; 
+  max-width: 300px;   
+}
+
+.missingTableId{
+  font-size: 20px;
+}

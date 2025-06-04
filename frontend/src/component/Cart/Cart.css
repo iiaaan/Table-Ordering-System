@@ -1,0 +1,61 @@
+.cartitem {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.cartitem-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push content to edges */
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cartitem-top img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cartitem-info {
+  margin-left: auto; /* Pushes the info to the right */
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cartitem-info .quantity{
+  width: 100px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartitem-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Addons section */
+.cartitem-addons {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Notes/instructions */
+.cartitem-note {
+  font-size: 13px;
+  color: #444;
+  margin-top: 6px;
+  font-style: italic;
+}

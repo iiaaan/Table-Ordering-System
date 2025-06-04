@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js",
+    "seed": "nodemon seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cloudinary": "^1.41.3",
+    "multer": "^2.0.0",
+    "multer-storage-cloudinary": "^4.0.0"
+  }
+}
