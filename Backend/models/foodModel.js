@@ -9,3 +9,5 @@ const foodSchema = new mongoose.Schema({
     category: String,
     addOns: [{ name: String, price: Number }],
 })
+
+const foodModel =  mongoose.model("foods")
