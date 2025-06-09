@@ -25,16 +25,13 @@ connectDB();
 
 app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
 
-
-// api endpoints
-app.use("/api/order", orderRouter)
-
-
 app.use(express.static(path.join(__dirname, "../frontend/dist")))
-
 app.get("/{*any}", (req, res) => {
  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"))
 })
+
+// api endpoints
+app.use("/api/order", orderRouter)
 
 
  app.listen(port,()=>{
