@@ -22,6 +22,9 @@ app.use(cors())
 // db connection
 connectDB();
 
+app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
+
+
 // api endpoints
 app.use("/api/order", orderRouter)
 app.use("/api", uploadImageRouter)
