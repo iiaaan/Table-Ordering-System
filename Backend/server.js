@@ -1,10 +1,11 @@
+import { fileURLToPath } from 'url';
 import cors from "cors"
 import express from "express"
 import path from "path"
 import { connectDB } from "./config/db.js"
 import 'dotenv/config.js'
 import orderRouter from "./routes/orderRoute.js"
-import uploadImageRouter from "./routes/uploadImageRoute.js"
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -27,16 +28,15 @@ app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
 
 // api endpoints
 app.use("/api/order", orderRouter)
-app.use("/api", uploadImageRouter)
 
 app.get("/",(req,res)=>{
     res.send("API Working")
 })
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")))
+app.use(express.static(path.join(__dirname, "../frontend/dist")))
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/frontend/dist/index.html"))
+app.get("/{*any}", (req, res) => {
+ res.sendFile(path.join(__dirname, "../frontend/dist/index.html"))
 })
 
 
