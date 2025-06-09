@@ -29,9 +29,6 @@ app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
 // api endpoints
 app.use("/api/order", orderRouter)
 
-app.get("/",(req,res)=>{
-    res.send("API Working")
-})
 
 app.use(express.static(path.join(__dirname, "../frontend/dist")))
 
