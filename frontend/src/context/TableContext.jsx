@@ -10,6 +10,7 @@ const TableProvider = (props) => {
         const params = new URLSearchParams(window.location.search)
         setTableId(params.get("tableId") || "")
         setRestaurantId(params.get("restaurauntId") || "")
+        console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
     },[])
     
     const TableValues = {
