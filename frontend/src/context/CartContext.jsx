@@ -70,7 +70,7 @@ const CartProvider = (props) => {
     const PlaceOrder = async () => {
         setIsPlacingOrder(true)
         try {
-            const response = await axios.post("http://localhost:4000/api/order/place", {resID:resId, tableID:tableId, items:CartItem})
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/order/place`, {resID:resId, tableID:tableId, items:CartItem})
             if(response.data.success){
                 setCartItem([])
                 localStorage.removeItem("cart")
