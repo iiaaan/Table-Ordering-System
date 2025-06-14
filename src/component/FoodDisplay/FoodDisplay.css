@@ -1,0 +1,59 @@
+.foodDisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+.items{
+    overflow-x: auto;
+    display: flex;
+    gap: 16px;
+    white-space: nowrap;
+}
+
+.featuredItems {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.items > * {
+  flex: 0 0 auto; 
+  min-width: 200px; 
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+.allFoodItems{
+  gap: 20px;
+}

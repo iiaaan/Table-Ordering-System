@@ -1,0 +1,26 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.main-content {
+    padding-top: calc(15vh + 64px); /* header height + navbar height */
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+.header-section {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f8f8f8;
+}
+
+.content-section {
+    flex: 1;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+} 
