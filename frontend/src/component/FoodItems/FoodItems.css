@@ -1,14 +1,14 @@
 .FoodItems {
   display: flex;
-  height: 20vh;
+  height: 15vh;
   width: 100%;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 16px;
-  padding: 12px;
+  margin-bottom: 12px;
+  padding: 8px;
   box-sizing: border-box;
-  gap: 5vw;
+  gap: 3vw;
 }
 
 .FoodItemsInfo {
@@ -21,13 +21,13 @@
 }
 
 .FoodItemsInfo h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin: 0 0 4px;
 }
 
 .FoodItemsInfo .description {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
   color: #555;
 
@@ -45,7 +45,7 @@
 
 
 .FoodItemsInfo .price{
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
     color: #555;
 }

@@ -1,18 +1,18 @@
 .foodDisplay{
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
 }
 
 .items{
-    overflow-x: auto;
-    display: flex;
-    gap: 16px;
-    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 1rem 0;
 }
 
 .featuredItems {
-  overflow-x: auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .items > * {
