@@ -5,6 +5,7 @@ import path from "path"
 import { connectDB } from "./config/db.js"
 import 'dotenv/config.js'
 import orderRouter from "./routes/orderRoute.js"
+import menuRouter from './routes/menuRoute.js';
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -23,15 +24,31 @@ app.use(cors())
 // db connection
 connectDB();
 
-app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")))
-app.get("/{*any}", (req, res) => {
- res.sendFile(path.join(__dirname, "../frontend/dist/index.html"))
-})
+
+
+
+
+
+//app.use("/.well-known/acme-challenge", express.static("/var/www/html"));
+
+//app.use(express.static(path.join(__dirname, "../frontend/dist")))
+//app.get("/{*any}", (req, res) => {
+// res.sendFile(path.join(__dirname, "../frontend/dist/index.html"))
+//})
+
+
+
+
+
+
+
+
+
 
 // api endpoints
 app.use("/api/order", orderRouter)
+app.use("/api/menu", menuRouter)
 
 
  app.listen(port,()=>{
