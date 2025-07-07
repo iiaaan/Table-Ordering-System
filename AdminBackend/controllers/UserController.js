@@ -2,11 +2,14 @@ import userModel from "../models/UserModel.js";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import validator from "validator"
+import { use } from "react";
 
-const createToken = (id) => {
-    return jwt.sign({id},process.env.JWT_SECRET)
+const createToken = (id, name) => {
+    const token = jwt.sign({id, name},process.env.JWT_SECRET)
+    console.log("Creating token with:", { id, name });
+    console.log("raw token ", token)
+    return token
 }
-
 // login user
 const loginUser = async(req,res) => {
     const {email, password} = req.body;
@@ -23,7 +26,7 @@ const loginUser = async(req,res) => {
             return res.json({success:false,message: "Invalid password or emails"})
         }
 
-        const token = createToken(user._id)
+        const token = createToken(user._id, user.name)
         res.json({success:true,token})
     } catch (error) {
         console.log(error);
@@ -59,7 +62,7 @@ const resisterUser = async(req,res) => {
         })
 
         const user = await newUSer.save()
-        const token = createToken(user._id)
+        const token = createToken(user._id, user.name)
         res.json ({success:true,token})
 
     }catch(error){

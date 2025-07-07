@@ -39,7 +39,7 @@ const FoodItemDetails = ({id, setSelectedItem}) => {
 
       <div className="basciInfo">
         <div className="image">
-          <img src={Item.image} alt="" />
+          <img src={Item.image} alt="" className="food-image"/>
         </div>
 
         <div className="details">

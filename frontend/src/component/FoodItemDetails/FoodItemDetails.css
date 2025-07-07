@@ -185,4 +185,13 @@
   }
 }
 
+.food-image {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 
